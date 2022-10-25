@@ -11,7 +11,7 @@ $('form').on('submit', function(e){
     $('#campo-tarefa').val('');
 
     $('#addli').click(function(){
-        $('<div id="addli" style="text-decoration:line-through"></div>').appendTo(novoItem);
+        $('<div id="addli" style="text-decoration:line-through"></div>')
     })
 })
 
