@@ -10,8 +10,9 @@ $('form').on('submit', function(e){
     $(novoItem).appendTo('ul');
     $('#campo-tarefa').val('');
 
-    $('#addli').click(function(){
-        $('<div id="addli" style="text-decoration:line-through"></div>')
+    $(novoItem).click(function(){
+        $(this).css('text-decoration', 'line-through');
     })
 })
+
 
