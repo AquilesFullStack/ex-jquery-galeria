@@ -54,8 +54,47 @@ $(document).ready(function() {
         }, 1000) //duração da animação
     })
 
-    $('nav li').click(function(){
+    $('#sobreLi').click(function(){
         const sobre= $(`#sobreLi`)
+        const sobreScroll= $(`#sobre-a-loja`)
+
+        $('html').animate({ //animação necessária para o documento
+            scrollTop: sobreScroll.offset().top //quando rolar envia para o end da variável /offset retorna a posição
+        }, 1000)
+    })
+
+    $('#emDestaqueLi').click(function(){
+        const emDestaque= $(`#emDestaqueLi`)
+        const emDestaqueScroll= $(`#emDestaque`)
+
+        $('html').animate({ //animação necessária para o documento
+            scrollTop: emDestaqueScroll.offset().top //quando rolar envia para o end da variável /offset retorna a posição
+        }, 1000)
+        
+    })
+
+    $('#promocoesli').click(function(){
+        const promocoes= $(`#promocoesli`)
+        const promocoesScroll= $(`#promocoes`)
+
+        $('html').animate({ //animação necessária para o documento
+            scrollTop: promocoesScroll.offset().top //quando rolar envia para o end da variável /offset retorna a posição
+        }, 1000)
+        
+    })
+
+    $('#contatoli').click(function(){
+        const contato= $(`#contatoli`)
+        const contatoScroll= $(`#contato`)
+
+        $('html').animate({ //animação necessária para o documento
+            scrollTop: contatoScroll.offset().top //quando rolar envia para o end da variável /offset retorna a posição
+        }, 1000)
+        
+    })
+})
+        /*
+                const sobre= $(`#sobreLi`)
         const sobreScroll= $(`#sobre-a-loja`)
         const emDestaque= $(`#emDestaqueLi`)
         const emDestaqueScroll= $(`#emDestaque`)
@@ -64,25 +103,23 @@ $(document).ready(function() {
         const contato= $(`#contatoli`)
         const contatoScroll= $(`#contato`)
 
-        if(sobre){
+        /*if(sobre).click(function(){
             $('html').animate({ //animação necessária para o documento
                 scrollTop: ($(sobreScroll).offset().top) //quando rolar envia para o end da variável /offset retorna a posição
             }, 1000)
-        }
-        if(emDestaque){
+        })
+        if(emDestaque).click(function(){
             $('html').animate({ //animação necessária para o documento
                 scrollTop: ($(emDestaqueScroll).offset().top) //quando rolar envia para o end da variável /offset retorna a posição
             }, 1000)
-        }
-        if(promocoes){
+        })
+        if(promocoes).click(function(){
             $('html').animate({ //animação necessária para o documento
                 scrollTop: ($(promocoesScroll).offset().top) //quando rolar envia para o end da variável /offset retorna a posição
             }, 1000)
-        }
-        if(contato){
+        })
+        if(contato).click(function(){
             $('html').animate({ //animação necessária para o documento
                 scrollTop: ($(contatoScroll).offset().top) //quando rolar envia para o end da variável /offset retorna a posição
             }, 1000)
-        }
-    })
-})
+        })*/
