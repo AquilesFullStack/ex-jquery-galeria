@@ -5,28 +5,40 @@
     font-family: 'roboto', sans-serif;
 }
 
+html{
+    overflow-x: hidden; /*todo conteúdo que passar do tamanho da tela horizontal não vai ser visível*/
+}
+
 .container{
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
 
-header{
+header , footer{
     background-color: #192a56;
     padding-top: 16px;
     color: white;
 }
 
-header > .container{
-    display: flex;
+header > .container,
+footer > .container{
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
 }
 
+header{
+    position: sticky; /*menu acompanha a tela na rolagem*/
+    top: 0; /*identifica que o menu deve ficar na extremidade superior*/
+    left: 0; /*identifica que o menu deve ficar na extremidade esquerda*/
+    z-index: 1; /*identifica que o menu passe por qualquer elemento q tenha = positon:relative*/
+}
+
 nav{
     background-color: #575fcf;
     padding: 16px 0;
+    display: none;
 }
 
 nav li{
@@ -43,14 +55,116 @@ nav li a{
     text-decoration: none;
 }
 
-.menu-hamburger{
+.menu-hamburguer{
     width: 32px;
+    cursor: pointer;
 }
 
-.menu-hamburger span{
+.menu-hamburguer span{
     height: 2px;
     width: 100%;
     background-color: #fff;
     display: block;
     margin-bottom: 4px;
+}
+
+.container-flex{
+    display: flex;
+}
+
+#sobre-a-loja img{
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+section{
+    padding: 48px 0;
+}
+
+section h2{
+    margin-bottom: 16px;
+}
+
+.lista-veiculos{
+    flex-wrap: wrap; /*quebra a linha e começa outra em baixo*/
+}
+
+.lista-veiculos li{
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 24px;
+}
+
+.lista-veiculos li img{
+    max-width: 100%; /*nao permite vazar na section*/
+}
+
+.lista-veiculos li h3{
+    margin: 16px 0;
+}
+
+.item-central{
+    margin: 0 5%;
+}
+
+button{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #119759;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.price{
+    margin: 16px 0;
+    display: block;
+}
+
+.price del{
+    color: #ccc;
+    font-size: 14px;
+}
+
+.form-campo{
+    margin-bottom: 16px;
+}
+
+.form-campo label{
+    font-weight: bold;
+    display: block;
+}
+
+.form-campo input,
+.form-campo textarea{
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+.form-campo textarea{
+    resize: none; /*impossibilita o usuário de mexer no campo*/
+    height: 120px;
+}
+
+form{
+    max-width: 360px;
+}
+
+form button{
+    width: 120px;
+}
+
+footer li{
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img{
+    height: 32px;
 }
