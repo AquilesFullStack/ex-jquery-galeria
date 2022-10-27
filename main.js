@@ -54,8 +54,8 @@ $(document).ready(function() {
         }, 1000) //duração da animação
     })
 
-    $('#sobreLi').click(function(){
-        const sobre= $(`#sobreLi`)
+    $('#sobreli').click(function(){
+        const sobre= $(`#sobreli`)
         const sobreScroll= $(`#sobre-a-loja`)
 
         $('html').animate({ //animação necessária para o documento
@@ -73,7 +73,7 @@ $(document).ready(function() {
         
     })
 
-    $('#promocoesli').click(function(){
+    $('#promocoesLi').click(function(){
         const promocoes= $(`#promocoesli`)
         const promocoesScroll= $(`#promocoes`)
 
@@ -83,7 +83,7 @@ $(document).ready(function() {
         
     })
 
-    $('#contatoli').click(function(){
+    $('#contatoLi').click(function(){
         const contato= $(`#contatoli`)
         const contatoScroll= $(`#contato`)
 

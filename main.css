@@ -53,6 +53,7 @@ nav li{
 nav li a{
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .menu-hamburguer{
